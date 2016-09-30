@@ -1,0 +1,36 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 帮助中心
+        link(href='../css/help.css' rel='stylesheet')
+    body
+        header.top-header.clearfix 帮助中心
+            a.top-header-back(href='index.html')
+        //help
+        section.helpbox#helpbox
+            dl
+                dt
+                    i.icon-help
+                    span 如何更换帐号头像？
+                dd.
+                    进入我的界面，点击头像进行修改。
+            dl
+                dt
+                    i.icon-help
+                    span 如何设置/新增/删除收货地址？
+                dd.
+                    进入我的界面，点击“设置”进行修改。
+            dl
+                dt
+                    i.icon-help
+                    span 个人资料怎样修改？
+                dd.
+                    进入我的界面，点击“设置”进行修改。
+        //help提示
+        div.tishi
+            span 没有我想要的，
+            a(href='#') 找XX聊聊
+        script(src='../js/help-display.js')
+

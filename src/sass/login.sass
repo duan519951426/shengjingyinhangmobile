@@ -1,0 +1,109 @@
+/**
+ * 注册登录
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+body
+  background-color: #e5e5e5
+.top-header, .lnform-table
+  background-color: #fff
+.ln-help
+  position: absolute
+  color: #222
+.lnform-table
+  border-collapse: collapse
+  width: 100%
+  td
+    border-bottom-style: solid
+    border-bottom-color: #dadada
+    color: #222
+.lnform-text
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  border: none
+  border-radius: 0
+.lnform-text::-webkit-input-placeholder
+  color: #a8a8a8
+.lnform-re
+  position: relative
+.lnform-verificationCode
+  position: absolute
+  img
+    width: 100%
+    height: 100%
+.lnform-text-lb
+  border-left-style: solid
+  border-left-color: #dadada
+.lnform-button
+  display: block
+  width: 92%
+  border: none
+  background-color: #db0000
+  color: #fff
+.ln-text
+  color: #5c626c
+  a
+    color: #db0000
+.text-r
+  text-align: right
+.text-c
+  text-align: center
+.mianfeizhuce
+  display: table
+  color: #db0000
+  border-style: solid
+  border-color: #db0000
+
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .ln-help
+      top: dv(38, $i)
+      right: dv(50, $i)
+      font-size: dv(24, $i)
+    .lnform
+      margin: dv(20, $i) 0 0
+    .lnform-table
+      margin: 0 0 dv(32, $i)
+      td
+        height: dv(56, $i)
+        padding: dv(24, $i) 0
+        border-bottom-width: $i * 1px
+        font-size: dv(28, $i)
+        &:first-child
+          width: dv(288, $i)
+          text-indent: dv(36, $i)
+    .lnform-text
+      padding: 0 dv(16, $i)
+      font-size: dv(28, $i)
+    .lnform-verificationCode
+      width: dv(162, $i)
+      height: dv(75, $i)
+      left: dv(205, $i)
+      top: dv(15, $i)
+    .lnform-text-lb
+      width: dv(200, $i)
+      border-left-width: $i * 1px
+    .lnform-button
+      height: dv(90, $i)
+      margin: 0 auto dv(21, $i)
+      border-radius: dv(24, $i)
+      font-size: dv(34, $i)
+    .ln-text
+      margin: 0 dv(38, $i) dv(28, $i)
+      font-size: dv(28, $i)
+    .mianfeizhuce
+      margin: dv(14, $i) auto 0
+      padding: dv(25, $i) dv(62, $i)
+      border-width: $i * 1px
+      font-size: dv(34, $i)
+      border-radius: dv(18, $i)
+    .lnform-cbox
+      width: dv(28, $i)
+      height: dv(28, $i)
+      margin: 0 dv(18, $i) 0 0
+      vertical-align: dv(-3, $i)
+      border: dv(2, $i) solid #bfbfbf
+

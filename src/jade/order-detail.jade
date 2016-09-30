@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 订单详情
+        link(href='../css/order-detail.css' rel='stylesheet')
+        link(href='../css/u-infBox.css' rel='stylesheet')
+    body
+        header.top-header.clearfix 订单详情
+            a.top-header-back(href='my.html')
+        //图片
+        div.order-inf
+            article.order-inf-text
+                p 等待买家付款
+                p 剩2天23小时自动关闭
+            i.order-inf-img
+        //收货地址
+        a.order-address(href='#')
+            div
+                p.clearfix
+                    span.f-l 收件人：王小明
+                    span.f-r 18841889636
+                address 收获地址：辽宁省沈阳市沈河区皇城街道沈阳市 沈河区西顺城街***号
+        //
+        ul.u-infList
+            li.u-infBox
+                table.u-infBox-table
+                    tr
+                        td.u-infBox-table-img(rowspan='2')
+                            a(href='#')
+                                img(src='../img/_delete/g0.jpg')
+                        td
+                            a.u-infBox-table-title(href='#') 现货选VR魔镜/蓝牙耳机/钢膜Lenovo/联想  k32c36乐檬3S移动4G手机k3
+                        td.u-infBox-table-price ￥608
+                            del ￥608
+                    tr
+                        td.u-infBox-table-text 机身颜色：柠檬金；套餐类型：官方标配；机身内存16GB;版本类型：中国大陆
+                        td.u-infBox-table-num ×1
+                p.u-infBox-lg2 共1件商品 合计：￥608（含运费 ￥0.00）
+                div.u-infBox-lg3
+                    a.u-infBox-btn.u-infBox-btn-b1(href='#') 取消订单
+                    a.u-infBox-btn.u-infBox-btn-b2(href='order-success.html') 付款

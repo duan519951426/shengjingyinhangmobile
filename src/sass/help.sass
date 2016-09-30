@@ -1,0 +1,64 @@
+/**
+ * 帮助
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+body
+  background-color: #f5f5f5
+.top-header
+  background-color: #fff
+/* helpbox */
+.helpbox
+  border-style: solid
+  border-color: #d8d8d8
+  background-color: #fff
+  dt, dd
+    border-bottom-style: solid
+    border-bottom-color: #e8e8e8
+  dt
+    font-size: 0
+    color: #000
+  dd
+    display: none
+    color: #636363
+.icon-help
+  display: inline-block
+  background-image: url("../img/help.jpg")
+  background-size: 100% 100%
+.tishi
+  display: table
+  font-size: 0
+  color: #fff
+  background-color: #cac9c7
+  a
+    color: #0c7edd
+
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .helpbox
+      margin: dv(51, $i) dv(24, $i) dv(28, $i)
+      padding: 0 dv(28, $i)
+      border-width: $i * 1px
+      border-radius: dv(10, $i)
+      dt
+        height: dv(86, $i)
+      dt, dd
+        padding: 0 0 0 dv(52, $i)
+        line-height: dv(86, $i)
+        border-bottom-width: $i * 1px
+      span, dd
+        font-size: dv(24, $i)
+    .icon-help
+      width: dv(36, $i)
+      height: dv(36, $i)
+      margin: 0 dv(16, $i) 0 dv(-52, $i)
+      vertical-align: dv(-8, $i)
+    .tishi
+      margin: 0 auto dv(50, $i)
+      padding: dv(12, $i) dv(30, $i)
+      border-radius: dv(10, $i)
+      a, span
+        font-size: dv(28, $i)
+

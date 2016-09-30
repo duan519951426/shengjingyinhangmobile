@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 产品列表
+        link(href='../css/goods-list.css' rel='stylesheet')
+    body
+        header.top-header.clearfix 产品列表
+            a.top-header-back(href='index.html')
+        // 改变列表排名
+        ul.changelist.clearfix
+            li
+                select.changelist-select.thisColor
+                    option 综合排序
+            li
+                a.changelist-href(href='#') 销量优先
+        // 商品列表
+        div#goods-list-box
+        //首页商品数据模拟
+        script(src='../js/data/data-goods-list.js')
+        //react
+        script(src='../js/react.15.2.1.min.js')
+        script(src='../js/react/layout-goods-list.js')

@@ -1,0 +1,33 @@
+/**
+ * 订单
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+body
+  background-color: #eee
+/* 查看订单 */
+.look-order
+  background-color: #fff
+  li
+    float: left
+    width: 25%
+    list-style: none
+  a
+    display: table
+    margin: 0 auto
+    border-bottom-style: solid
+    border-bottom-color: #fff
+    color: #5c626c
+    &.thisPage
+      border-bottom-color: #db0000
+      color: #db0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .look-order
+      font-size: dv(24, $i)
+      border-bottom: $i * 1px solid #dadada
+      a
+        padding: dv(28, $i) dv(24, $i)
+        border-bottom-width: $i * 2px

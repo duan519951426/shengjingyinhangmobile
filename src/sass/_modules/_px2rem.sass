@@ -1,0 +1,20 @@
+// 去掉单位
+@function del($number)
+  @return $number / ($number * 0 + 1)
+
+@function dv($v, $i)
+  @return $v / 2 * $i * 1px
+
+// 将px转换成rem
+$baseFontSize: 75
+
+@function px2rem($px)
+  @return (del($px) / $baseFontSize * 1rem)
+
+// 混合输出
+@mixin dpr($classname, $position)
+  @each $i in (1, 2, 3)
+    [data-dpr="#{$i}"]
+      .#{$classname}
+        @each $header, $value in $position
+          #{$header}: $value / 2 * $i * 1px

@@ -1,0 +1,225 @@
+/**
+ * 网站首页
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+
+// 轮播图
+@import "_modules/_banner"
+/* 搜索 */
+.search
+  position: absolute
+  top: px2rem(1)
+  right: px2rem(30)
+  z-index: 3
+.search-input
+  background-color: #fff
+  border: none
+  background-image: url("../img/fangdajing.png")
+  background-repeat: no-repeat
+.search-input::-webkit-input-placeholder
+  color: #888
+@include dpr(search-input, (width: 340 - 23 - 75, height: 50, padding-left: 75, padding-right: 23, font-size: 24, border-radius: 48))
+[data-dpr="1"]
+  .search-input
+    background-position: 9px 6px
+    background-size: 16px 14px
+[data-dpr="2"]
+  .search-input
+    background-position: 18px 12px
+    background-size: 32px 28px
+[data-dpr="3"]
+  .search-input
+    background-position: 27px 18px
+    background-size: 48px 42px
+/* 分类导航 */
+.top-nav
+  margin: 0 px2rem(20)
+  li
+    margin: 0 0 px2rem(40)
+    float: left
+    width: 25%
+    list-style: none
+    text-align: center
+  a
+    display: block
+.top-nav-icon
+  width: px2rem(93)
+  height: px2rem(93)
+  margin: 0 auto px2rem(21)
+  border-radius: px2rem(18)
+.top-nav-text
+  font-size: px2rem(24)
+  color: #333
+/* 图标 */
+@import "_modules/_indexicons"
+// 背景颜色
+$navBgColor: (1: #fd5e5e, 2: #b778fd, 3: #33d198, 4: #ffb139, 5: #2c9df7, 6: #fd78ec, 7: #7c5efd, 8: #fd5e5e)
+@each $header, $value in $navBgColor
+  .top-nav-bg-#{$header}
+    background-color: $value
+/* 广告 */
+.guanggao
+  display: block
+  margin: 0 0 px2rem(25) 0
+.guanggao img
+  width: 100%
+/* 热门市场 */
+.hotgoods
+  padding: 0 0 px2rem(22) 0
+  border-bottom-color: #e5e5e5
+  border-bottom-style: solid
+@include dpr(hotgoods, (border-bottom-width: 2))
+.hotgoods-title
+  font-size: px2rem(34)
+  img
+    width: px2rem(54)
+    height: px2rem(54)
+    margin: 0 px2rem(16) 0 px2rem(37)
+    vertical-align: px2rem(-9)
+  a
+    color: #222
+.hotgoods-list
+  width: 100%
+  li
+    float: left
+    width: 25%
+    margin: px2rem(40) 0 0
+    text-align: center
+  a, b
+    display: block
+    width: 100%
+    box-sizing: border-box
+    padding: 0 px2rem(5)
+    overflow: hidden
+.hotgoods-list-h4
+  height: px2rem(34)
+  font-size: px2rem(28)
+  line-height: px2rem(30)
+  color: #333
+.hotgoods-list-b
+  display: block
+  height: px2rem(30)
+  font-size: px2rem(24)
+  line-height: px2rem(30)
+  font-weight: normal
+  color: #a1a1a1
+  margin: px2rem(7) 0 0
+.hotgoods-list-img
+  width: px2rem(130)
+  height: px2rem(130)
+  margin: px2rem(18) auto 0
+  img
+    width: 100%
+    height: 100%
+/* 商品楼层 */
+.category
+  margin: px2rem(54) 0 0
+.category-title
+  font-weight: normal
+  img
+    width: px2rem(50)
+    height: px2rem(50)
+    margin: 0 px2rem(19)
+    vertical-align: px2rem(-10)
+  a
+    margin: 0 px2rem(21) 0 0
+    font-size: px2rem(34)
+    color: #222
+  span
+    font-size: px2rem(24)
+    color: #e40301
+    vertical-align: px2rem(1)
+.category-list
+  width: 100%
+  li
+    padding: px2rem(25) 0
+    border-bottom-style: solid
+    border-bottom-color: #e5e5e5
+@include dpr(category-list li, (border-bottom-width: 2))
+.f-l
+  float: left
+.category-image
+  width: px2rem(147)
+  height: px2rem(147)
+  margin: 0 0 0 px2rem(34)
+  display: block
+  border-style: solid
+  border-color: #efefef
+  img
+    width: 100%
+    height: 100%
+@include dpr(category-image, (border-width: 4))
+.category-box
+  width: px2rem(519)
+  margin: 0 0 0 px2rem(27)
+.category-title
+  margin: 0 0 px2rem(22)
+  font-size: px2rem(30)
+  font-weight: bold
+  color: #333
+.category-transactions
+  float: right
+.category-text
+  height: px2rem(55)
+  margin: 0 0 px2rem(5)
+  line-height: px2rem(22)
+  clear: both
+.category-transactions, .category-text
+  font-size: px2rem(24)
+  color: #a0a0a0
+.category-price
+  display: block
+  font-size: px2rem(28)
+  color: #e40301
+  font-style: normal
+/* 点击加载更多 */
+.click-more-goods
+  display: block
+  border-bottom-style: solid
+  border-bottom-color: #c8c9ca
+  background-color: #f3f5f7
+  color: #929292
+  text-align: center
+@include dpr(click-more-goods, (height: 90, border-bottom-width: 2, font-size: 32, line-height: 90))
+/* 底部导航 */
+.bottom-nav, .mobilechange
+  background-color: #f8f8f8
+  border-bottom-style: solid
+  border-bottom-color: #c8c9ca
+.bottom-nav, .bottom-nav a
+  color: #8b8b8b
+  text-align: center
+@include dpr(bottom-nav, (padding-top: 30, padding-bottom: 30, border-bottom-width: 2, font-size: 28))
+/* 移动端电脑端切换 */
+@include dpr(mobilechange, (padding-top: 33, padding-bottom: 35, border-bottom-width: 2, font-size: 24))
+.mobilechange
+  color: #555
+  text-align: center
+  b
+    display: inline-block
+    font-weight: normal
+  a
+    display: block
+    border-style: solid
+    border-color: #555
+@for $i from 1 through 3
+  [data-dpr="#{$i}"] .mobilechange
+    b
+      margin: 0 (78 / 2 * $i * 1px)
+    a
+      width: 70 / 2 * $i * 1px
+      height: 70 / 2 * $i * 1px
+      margin-bottom: 12 / 2 * $i * 1px
+      border-radius: 70 / 2 * $i * 1px
+      border-width: $i * 1px
+/* footer */
+.footer
+  padding: px2rem(34) 0
+  font-size: px2rem(24)
+  line-height: px2rem(35)
+  text-align: center
+  color: #8b8b8b
+  background-color: #f8f8f8
+@import "_modules/_splite2"
+@import "_modules/_fixed_nav"

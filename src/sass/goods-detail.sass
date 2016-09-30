@@ -1,0 +1,284 @@
+/**
+ * 商品列表
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+body
+  background-color: #eee
+/* 顶部选项卡 */
+.top-tab
+  text-align: center
+  a
+    position: relative
+    float: left
+    display: block
+    box-sizing: border-box
+    width: 50%
+    border: none
+    border-bottom-style: solid
+    border-bottom-color: #fff
+    background-color: #fff
+    color: #524d4d
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      background-color: #e5e5e5
+  a.tabIndex
+    border-bottom-color: #db0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .top-tab
+      a
+        height: dv(90, $i)
+        font-size: dv(28, $i)
+        line-height: dv(90, $i)
+        &:after
+          width: dv(2, $i)
+          height: dv(76, $i)
+    .btn-left:after
+      right: 0
+    .btn-right:after
+      left: 0
+    .tabIndex
+      border-bottom-width: $i * 2px
+/* 购买按钮 */
+.fixed-buy
+  position: fixed
+  z-index: 10
+  left: 0
+  bottom: 0
+  width: 100%
+.buy-button
+  float: left
+  display: block
+  width: 50%
+  height: 100%
+  border: none
+  color: #fff
+.buy-btn-bg1
+  background-color: #ffc602
+.buy-btn-bg2
+  background-color: #db0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .buy-button-box, .fixed-buy
+      height: dv(100, $i)
+    .buy-button
+      font-size: dv(30, $i)
+/* 基本信息 */
+@import "_modules/_banner"
+.banner
+  margin: 0
+.jibenxinxi-inf
+  margin: 0 0 px2rem(20) 0
+  padding: px2rem(32) px2rem(34) px2rem(60)
+  background-color: #fff
+.jibenxinxi-title
+  font-size: px2rem(32)
+  margin: 0 0 px2rem(60)
+  line-height: px2rem(45)
+.jibenxinxi-moneynow
+  margin: 0 0 px2rem(28) 0
+  color: #db0000
+  font-size: px2rem(32)
+  em
+    margin: 0 0 0 px2rem(20)
+    font-size: px2rem(24)
+    font-style: normal
+    color: #ffc602
+.jibenxinxi-moneyold, .jibenxinxi-etc
+  font-size: px2rem(24)
+  color: #a6a6a6
+.jibenxinxi-moneyold
+  margin: 0 0 px2rem(41) 0
+  del
+    margin: 0 0 0 px2rem(12)
+.jibenxinxi-etc li
+  float: left
+  width: 33.3%
+.text-c
+  text-align: center
+.text-r
+  text-align: right
+.jibenxinxi-choiceInf
+  display: block
+  color: #333
+  background-color: #fff
+  background-image: url("../img/jiantou-you2.png")
+  background-repeat: no-repeat
+  background-position: px2rem(704) center
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .jibenxinxi-inf, .jibenxinxi-choiceInf
+      border-bottom: $i * 1px solid #dadada
+    .jibenxinxi-choiceInf
+      padding: 0 dv(86, $i)
+      height: dv(88, $i)
+      font-size: dv(24, $i)
+      line-height: dv(88, $i)
+      background-size: dv(14, $i) dv(22, $i)
+/* 商品详情 */
+.shangpinxiangqing
+  background-color: #fff
+.shangpin-ck
+  color: #a6a6a6
+  background-color: #f9f9f9
+  li
+    float: left
+    width: 33.3%
+  button
+    display: table
+    box-sizing: border-box
+    margin: 0 auto
+    background-color: transparent
+    border: none
+    border-bottom-style: solid
+    border-bottom-color: #f9f9f9
+  button.tabIndex2
+    color: #db0000
+    border-bottom-color: #db0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .shangpin-ck
+      border-bottom: $i * 3px solid #dadada
+      button
+        padding: 0 dv(6, $i)
+        height: dv(99, $i)
+        font-size: dv(30, $i)
+        border-bottom-width: $i * 2px
+// 图文详情
+.information-tuwen img
+  display: block
+  width: 100%
+// 产品参数表格
+.inf-chanpin-table
+  border-collapse: collapse
+  width: 100%
+  th, td
+    padding: px2rem(36)
+    font-size: px2rem(26)
+  th
+    min-width: px2rem(206)
+    font-weight: normal
+    color: #474d59
+//产品包装list
+.inf-baozhuang-list
+  color: #222
+  font-size: px2rem(24)
+  list-style-type: decimal
+  list-style-position: inside
+  li
+    padding: px2rem(36)
+    overflow: hidden
+  span
+    float: right
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .inf-chanpin-table th, .inf-chanpin-table td, .inf-baozhuang-list li
+        border-bottom: $i * 1px solid #dadada
+/* 弹出层 */
+.choiceInf-dialog
+  display: none
+  position: fixed
+  z-index: 8
+  top: 0
+  left: 0
+  right: 0
+  background-color: rgba(0, 0, 0, .8)
+.choiceInf-dialog-close
+  position: absolute
+  z-index: 9
+  display: block
+  background-image: url("../img/close.png")
+  background-size: 100% 100%
+.choiceInf-box
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 100%
+  height: 90%
+  background-color: #fff
+.choiceInf-top
+  position: relative
+  h4
+    font-weight: normal
+    color: #db0000
+  p
+    color: #4c5053
+.choiceInf-top-img
+  position: absolute
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+.choiceInf-cBox
+  position: absolute
+  overflow: auto
+.choiceInf-dl
+  dt
+    color: #0c1b28
+.choiceInf-labelBox
+  overflow: hidden
+  label, b
+    display: block
+  label
+    float: left
+    overflow: hidden
+  b
+    background-color: #f2f2f2
+    color: #333
+    font-weight: normal
+  input
+    display: none
+    &:checked + b
+      background-color: #ffc602
+      color: #fff
+
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .choiceInf-dialog-close
+      top: dv(26, $i)
+      right: dv(30, $i)
+      width: dv(50, $i)
+      height: dv(50, $i)
+    .choiceInf-dialog
+      bottom: dv(100, $i)
+    .choiceInf-top
+      height: dv(218, $i)
+      margin: 0 0 0 dv(298, $i)
+      h4
+        padding: dv(45, $i) 0 0
+        font-size: dv(30, $i)
+      p
+        margin: dv(32, $i) 0 0
+        font-size: dv(24, $i)
+        line-height: dv(38, $i)
+    .choiceInf-top-img
+      top: dv(-26, $i)
+      left: dv(-278, $i)
+      width: dv(244, $i)
+      height: dv(244, $i)
+      border-radius: dv(10, $i)
+    .choiceInf-cBox
+      top: dv(248, $i)
+      left: dv(34, $i)
+      right: dv(34, $i)
+      bottom: dv(20, $i)
+    .choiceInf-dl
+      padding: dv(36, $i) 0 dv(30, $i)
+      border-bottom: $i * 1px solid #dadada
+      dt
+        margin: 0 0 dv(18, $i) 0
+        font-size: dv(30, $i)
+    .choiceInf-labelBox
+      font-size: dv(24, $i)
+      label
+        margin: dv(10, $i) dv(26, $i) dv(10, $i) 0
+        border-radius: dv(10, $i)
+      b
+        padding: dv(16, $i) dv(22, $i)
+

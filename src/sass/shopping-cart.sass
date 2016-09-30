@@ -1,0 +1,174 @@
+/**
+ * 购物车
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+body
+  background-color: #f5f5f5
+.list-table
+  border-collapse: collapse
+  width: 100%
+  background-color: #fff
+.list-table-editor
+  float: right
+  display: table
+  border: none
+  background-color: transparent
+  color: #1c2227
+.list-table-lableTd
+  text-align: center
+.list-table-imgTd
+  a, img
+    display: block
+    width: 100%
+    height: 100%
+.list-table-title
+  display: block
+  color: #353a3d
+.list-table-text
+  color: #8b8b8b
+.list-table-title, .list-table-text
+  overflow: hidden
+.list-table-etc
+  em
+    font-style: normal
+    color: #db0000
+  b
+    float: right
+    font-weight: normal
+    color: #222
+.checkbox
+  -webkit-appearance: none
+  &:checked
+    background-color: #db0000
+.list-table-td1 span
+  float: left
+  display: table
+  color: #db0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .list-table
+      margin: 0 0 dv(24, $i) 0
+      border-top: $i * 1px solid #dcdcdc
+      border-bottom: $i * 1px solid #dcdcdc
+    .list-table-td1
+      padding: dv(28, $i) 0
+      span
+        margin: dv(4, $i) 0 0 dv(24, $i)
+        font-size: dv(24, $i)
+    .list-table-editor
+      padding: dv(6, $i) dv(34, $i)
+      border-left: $i * 1px solid #d3d3d3
+      font-size: dv(24, $i)
+    .list-table-lableTd
+      width: dv(102, $i)
+    .list-table-td2 td
+      padding-top: dv(14, $i)
+      padding-bottom: dv(14, $i)
+      background-color: #fafafa
+    .list-table-imgTd
+      width: dv(192, $i)
+      height: dv(192, $i)
+    .list-table-infTd
+      padding-left: dv(26, $i)
+      padding-right: dv(26, $i)
+      height: dv(204, $i)
+    .list-table-title
+      height: dv(78, $i)
+      margin: 0 0 dv(14, $i) 0
+      font-size: dv(28, $i)
+    .list-table-text
+      height: dv(70, $i)
+      margin: 0 0 dv(14, $i) 0
+      font-size: dv(24, $i)
+    .list-table-etc
+      height: dv(18, $i)
+      font-size: dv(24, $i)
+    .checkbox
+      width: dv(42, $i)
+      height: dv(42, $i)
+      border: $i * 2px solid #8f95aa
+      border-radius: dv(42, $i)
+    .va
+      margin: 0 dv(22, $i) 0 0
+      vertical-align: dv(-8, $i)
+/* 加减商品 */
+.changeGoodNum
+  position: relative
+.changeGoodNum-btn, .changeGoodNum-text
+  position: absolute
+  top: 0
+  bottom: 0
+  color: #353a3d
+.changeGoodNum-btn
+  border: none
+  background-color: transparent
+.changeGoodNum-text
+  text-align: center
+.changeGoodNum-btn-left
+  left: 0
+.changeGoodNum-btn-right
+  right: 0
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .changeGoodNum
+      height: dv(100, $i)
+      border: $i * 1px solid #353a3d
+    .changeGoodNum-btn, .changeGoodNum-text
+      font-size: dv(28, $i)
+    .changeGoodNum-btn
+      width: dv(100, $i)
+    .changeGoodNum-text
+      left: dv(100, $i)
+      right: dv(100, $i)
+      border-left: $i * 1px solid #353a3d
+      border-right: $i * 1px solid #353a3d
+      line-height: dv(100, $i)
+
+/* 结算 */
+.fixed-jiesuanbox
+  box-sizing: border-box
+  position: fixed
+  z-index: 1
+  left: 0
+  bottom: 0
+  width: 100%
+  background-color: #fff
+.jiesuanbox-label
+  float: left
+  color: #555
+  b
+    display: inline-block
+.jiesuanbox-btn, .jiesuanbox-text
+  float: right
+.jiesuanbox-btn
+  display: block
+  height: 100%
+  border: none
+  border-radius: 0
+  color: #fff
+  background-color: #dc0000
+.jiesuanbox-text
+  color: #555
+  var
+    font-style: normal
+    color: #dc0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .fixed-jiesuanbox, .jiesuan-box
+      height: dv(104, $i)
+    .fixed-jiesuanbox
+      border-top: $i * 2px solid #dfdfdf
+    .jiesuanbox-label
+      margin: dv(10, $i) 0 0
+      padding: dv(14, $i) dv(30, $i)
+      font-size: dv(28, $i)
+    .jiesuanbox-btn
+      width: dv(220, $i)
+      font-size: dv(28, $i)
+    .jiesuanbox-text
+      margin: 0 dv(12, $i) 0
+      font-size: dv(28, $i)
+      line-height: dv(104, $i)

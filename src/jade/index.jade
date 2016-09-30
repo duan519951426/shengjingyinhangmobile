@@ -1,0 +1,112 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 盛京银行商城
+        link(href='../css/index.css' rel='stylesheet')
+    body
+        //轮播图 750 * 365
+        section.banner
+            div.bannerbox#bannerbox
+                div.bannerlist.clearfix#bannerlist
+                    a(href='#')
+                        img(src='../img/banner/banner1.jpg')
+                    a(href='#')
+                        img(src='../img/banner/banner2.jpg')
+                    a(href='#')
+                        img(src='../img/banner/banner3.jpg')
+                    a(href='#')
+                        img(src='../img/banner/banner4.jpg')
+                    a(href='#')
+                        img(src='../img/banner/banner5.jpg')
+            ol.bannerindex#bannerindex
+                li 1
+                li 2
+                li 3
+                li 4
+                li 5
+        //轮播
+        script(src='../js/banner.js' async)
+        //搜索
+        form.search
+            input.search-input(type='text' placeholder='搜索')
+        //分类导航
+        nav.top-nav.clearfix
+            li
+                a.top-nav-icon.syin.syin-nav-1.top-nav-bg-1(href='#')
+                a.top-nav-text(href='#') 手机数码
+            li
+                a.top-nav-icon.syin.syin-nav-2.top-nav-bg-2(href='#')
+                a.top-nav-text(href='#') 电脑及周边
+            li
+                a.top-nav-icon.syin.syin-nav-3.top-nav-bg-3(href='#')
+                a.top-nav-text(href='#') 家用电器
+            li
+                a.top-nav-icon.syin.syin-nav-4.top-nav-bg-4(href='#')
+                a.top-nav-text(href='#') 家具百货
+            li
+                a.top-nav-icon.syin.syin-nav-5.top-nav-bg-5(href='#')
+                a.top-nav-text(href='#') 腕表珠宝
+            li
+                a.top-nav-icon.syin.syin-nav-6.top-nav-bg-6(href='#')
+                a.top-nav-text(href='#') 时尚美妆
+            li
+                a.top-nav-icon.syin.syin-nav-7.top-nav-bg-7(href='#')
+                a.top-nav-text(href='#') 服装鞋帽/箱包
+            li
+                a.top-nav-icon.syin.syin-nav-8.top-nav-bg-8(href='#')
+                a.top-nav-text(href='#') 母婴/玩具
+        //广告
+        a.guanggao(href='#')
+            img.guanggao-img(src='../img/_delete/x.jpg')
+        //产品
+        div#category
+        //首页商品数据模拟
+        script(src='../js/data/data-index.js')
+        //react
+        script(src='../js/react.15.2.1.min.js')
+        script(src='../js/react/layout-index.js')
+        //底部导航
+        nav.bottom-nav
+            a(href='login.html') 登录
+            span |
+            a(href='register.html') 注册
+            span |
+            a(href='javascript: window.scroll(0, 0);') 回到顶部
+            span |
+            a(href='help.html') 帮助
+        //触屏电脑切换
+        div.mobilechange
+            b
+                a.splite2.splite2-x1(href='#')
+                span 触屏版
+            b
+                a.splite2.splite2-x2(href='#')
+                span 电脑版
+        //footer
+        .footer
+            |盛京银行商城版权所有 | &copy;2012-2016
+            br
+            |辽ICP备0000000000
+            br
+            |Version Beta 1.5
+        //fixed导航
+        section.fixed-nav-box
+            nav.fixed-nav.clearfix
+                li
+                    a(href='index.html')
+                        i.splite2.splite2-house-fouce
+                        span.fixed-nav-fouce 首页
+                li
+                    a(href='goods-list.html')
+                        i.splite2.splite2-seach
+                        span 分类
+                li
+                    a(href='shopping-cart.html')
+                        i.splite2.splite2-shopping
+                        span 购物车
+                li
+                    a(href='my.html')
+                        i.splite2.splite2-human
+                        span 我的

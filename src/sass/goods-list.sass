@@ -1,0 +1,117 @@
+/**
+ * 商品列表
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+/* 改变列表排名 */
+.changelist
+  border-bottom-style: solid
+  border-bottom-color: #dadada
+  border-top-style: solid
+  border-top-color: #dadada
+  li
+    float: left
+    width: 50%
+    text-align: center
+.changelist-select, .changelist-href
+  display: table
+  margin: 0 auto
+  color: #5f646e
+.changelist-select
+  -webkit-appearance: none
+  border: none
+  background-color: #fff
+.thisColor
+  color: #db0000
+@function dv($v, $i)
+  @return $v / 2 * $i * 1px
+
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .changelist
+      padding: dv(30, $i) 0
+      border-bottom-width: $i * 1px
+      border-top-width: $i * 1px
+    .changelist-select, .changelist-href
+      font-size: dv(28, $i)
+    .goods-list li
+      &:nth-child(odd)
+        border-right-width: $i * 1px
+
+/* 商品列表 */
+.goods-list
+  $color: #eee
+  background-color: $color
+  padding: px2rem(16) 0 0
+  li
+    float: left
+    width: 50%
+    margin: 0 0 px2rem(15) 0
+    box-sizing: border-box
+    border-bottom-style: solid
+    border-bottom-color: #dedede
+    background-color: #fff
+    &:nth-child(odd)
+      border-right-style: solid
+      border-right-color: $color
+    &:nth-child(even)
+      border-left-style: solid
+      border-left-color: $color
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .goods-list li
+      border-bottom-width: $i * 1px
+      &:nth-child(odd)
+        border-right-width: $i * 1px
+      &:nth-child(even)
+        border-left-width: $i * 1px
+
+.goods-list-image
+  display: block
+  width: 100%
+  height: px2rem(372px)
+  margin: 0 0 px2rem(22) 0
+  img
+    width: 100%
+    height: 100%
+.goods-list-title
+  height: px2rem(76)
+  margin: 0 px2rem(18) px2rem(18)
+  font-size: px2rem(32)
+  line-height: px2rem(33)
+  font-weight: normal
+  a
+    color: #222
+.goods-list-etc
+  margin: 0 px2rem(21) px2rem(15)
+  height: px2rem(30)
+  font-size: px2rem(24)
+  color: #939393
+.goods-list-baoyou
+  float: left
+.goods-list-city
+  float: right
+.goods-list-money
+  margin: 0 px2rem(16) px2rem(18)
+  height: px2rem(32)
+  line-height: px2rem(25)
+  em
+    margin: 0 px2rem(10) 0 0
+    font-size: px2rem(32)
+    font-style: normal
+    color: #db0000
+  b
+    font-size: px2rem(24)
+    font-weight: normal
+    color: #939393
+/* 点击加载更多 */
+.click-more-goods
+  display: block
+  border-bottom-style: solid
+  border-bottom-color: #c8c9ca
+  background-color: #f3f5f7
+  color: #929292
+  text-align: center
+@include dpr(click-more-goods, (height: 90, border-bottom-width: 2, font-size: 32, line-height: 90))

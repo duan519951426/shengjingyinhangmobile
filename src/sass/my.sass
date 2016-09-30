@@ -1,0 +1,135 @@
+/**
+ * 我的
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+
+body
+  background-color: #e7e7e7
+/* 顶部图片 */
+.my-myInf
+  position: relative
+  padding: px2rem(50) 0
+  background-color: #d60a0a
+  background-image: url("../img/mybg.png")
+.my-myInf-pic, .my-myInf-name
+  float: left
+.my-myInf-pic
+  display: block
+  width: px2rem(102)
+  height: px2rem(102)
+  margin: 0 px2rem(20) 0 px2rem(38)
+  border-radius: px2rem(102)
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+.my-myInf-name
+  margin: px2rem(34) 0 0
+  font-size: px2rem(32)
+  color: #fff
+.my-myInf-setUp, .my-myInf-message, .pic-good
+  position: absolute
+.my-myInf-setUp, .my-myInf-message
+  z-index: 2
+.my-myInf-message
+  display: block
+  top: px2rem(26)
+  right: px2rem(22)
+  width: px2rem(60)
+  height: px2rem(60)
+  background-image: url(../img/message.png)
+  background-size: px2rem(52) px2rem(48)
+  background-position: center center
+  background-repeat: no-repeat
+.my-myInf-setUp
+  top: px2rem(36)
+  right: px2rem(110)
+  font-size: px2rem(30)
+  color: #fff
+.pic-good
+  display: block
+  z-index: 1
+  top: px2rem(68)
+  right: px2rem(146)
+  width: px2rem(158)
+  height: px2rem(128)
+  background-image: url("../img/goods.png")
+  background-size: 100% 100%
+/* 订单 */
+.my-myOrder
+  display: block
+  padding: px2rem(42) px2rem(64) px2rem(42) px2rem(36)
+  background-image: url("../img/jiantou-you1.png")
+  background-size: px2rem(20) px2rem(32)
+  background-position: px2rem(702) center
+  background-repeat: no-repeat
+  border-bottom-style: solid
+  border-bottom-color: #dadada
+  background-color: #fff
+  b
+    float: left
+    font-size: px2rem(28)
+    color: #222
+  span
+    float: right
+    margin: px2rem(2) 0 0
+    font-size: px2rem(24)
+    color: #989898
+@include dpr(my-myOrder, (border-bottom-width: 2))
+/* 货物信息 */
+.my-goodsInf
+  padding: px2rem(26) 0 px2rem(30)
+  background-color: #fff
+  li
+    float: left
+    width: 25%
+  a, i, span
+    display: block
+  a, i
+    margin: 0 auto
+  a
+    width: px2rem(100)
+    height: px2rem(100)
+  i
+    position: relative
+    width: px2rem(56)
+    height: px2rem(56)
+  span
+    margin: px2rem(12)
+    font-size: px2rem(24)
+    color: #222
+    text-align: center
+.icon-my
+  background-image: url("../img/icon-my.png")
+  background-size: px2rem(254) px2rem(56)
+.icon-my-a
+  background-position: 0 0
+.icon-my-b
+  background-position: px2rem(-66) 0
+.icon-my-c
+  background-position: px2rem(-132) 0
+.icon-my-d
+  background-position: px2rem(-198) 0
+.my-goodNum
+  display: block
+  position: absolute
+  z-index: 1
+  top: px2rem(-14)
+  right: px2rem(-26)
+  width: px2rem(38)
+  height: px2rem(38)
+  font-size: px2rem(24)
+  line-height: px2rem(40)
+  border-radius: px2rem(40)
+  overflow: hidden
+  color: #db0000
+  font-style: normal
+  text-align: center
+  border-style: solid
+  border-color: #db0000
+  background-color: #fff
+@include dpr(my-goodNum, (border-width: 4))
+
+@import "_modules/_splite2"
+@import "_modules/_fixed_nav"

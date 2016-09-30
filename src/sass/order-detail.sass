@@ -1,0 +1,164 @@
+/**
+ * 订单详情
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+/* 顶部信息 */
+.order-inf
+  display: table
+  position: relative
+  width: 100%
+  height: px2rem(200)
+  padding: 0 0 0 px2rem(78)
+  background-color: #d60b0b
+  background-image: url("../img/mybg.png")
+.order-inf-img
+  position: absolute
+  z-index: 1
+  bottom: px2rem(10)
+  right: px2rem(68)
+  display: block
+  width: px2rem(234)
+  height: px2rem(146)
+  background-image: url("../img/meinv.png")
+  background-size: 100% 100%
+.order-inf-text
+  display: table-cell
+  margin-left: px2rem(76)
+  font-size: px2rem(24)
+  vertical-align: middle
+  color: #fff
+  p
+    margin: px2rem(24) 0
+/* 收货地址 */
+.order-address
+  display: block
+  padding: px2rem(46) 0 px2rem(46) px2rem(98)
+  background-image: url("../img/address.png")
+  background-size: px2rem(30) px2rem(44)
+  background-position: px2rem(34) center
+  border-bottom-style: solid
+  border-bottom-color: #dadada
+  div
+    height: 100%
+    padding: 0 px2rem(86) 0 0
+    font-size: px2rem(24)
+    color: #222
+    background-image: url("../img/jiantou-you2.png")
+    background-size: px2rem(14) px2rem(22)
+    background-position: px2rem(590) center
+  p
+    margin: 0 0 px2rem(36) 0
+  address
+    line-height: px2rem(42)
+    font-style: normal
+@include dpr(order-address, (border-bottom-width: 2))
+.order-address, .order-address div
+  background-repeat: no-repeat
+.f-l
+  float: left
+.f-r
+  float: right
+/* 订单成功 */
+.order-xiangqing
+  display: table
+  color: #222
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .order-xiangqing
+      padding: dv(24, $i) dv(80, $i)
+      margin: dv(32, $i) 0 dv(40, $i) dv(78, $i)
+      border: $i * 2px solid #959595
+      border-radius: dv(10, $i)
+      font-size: dv(24, $i)
+.you-want-to-buy
+  height: px2rem(92)
+  background-image: url("../img/YouWantToBuy.png")
+  background-size: 100% 100%
+  background-color: #eee
+/* 确认订单 */
+.order-confirm .order-address
+  border: none
+.seven-color
+  background-image: url("../img/7color.jpg")
+  background-color: #eee
+  background-repeat: no-repeat
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .seven-color
+      height: dv(12, $i)
+      padding-bottom: dv(24, $i)
+      background-size: 100% dv(12, $i)
+/* 列表 */
+.order-confirm-list-table
+  border-collapse: collapse
+.order-confirm-list-image
+  display: block
+  img
+    width: 100%
+    height: 100%
+.order-confirm-list-title
+  display: block
+  color: #222
+.order-confirm-list-text
+  color: #9a9a9a
+.order-confirm-list-price
+  color: #db0000
+.order-confirm-list-etc
+  color: #222
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .order-confirm-list-table
+      margin: 0 0 dv(40, $i)
+    .order-padding-1
+      padding: dv(10, $i) dv(18, $i)
+    .order-confirm-list
+      padding: 0 dv(18, $i)
+    .order-confirm-list-border
+      border-bottom: $i * 1px solid #dadada
+    .order-confirm-list-image
+      width: dv(204, $i)
+      height: dv(204, $i)
+    .order-confirm-list-title
+      font-size: dv(28, $i)
+      line-height: dv(44, $i)
+    .order-confirm-list-text, .order-confirm-list-price, .order-confirm-list-etc
+      font-size: dv(24, $i)
+    .order-confirm-list-etc td
+      padding: dv(34, $i) dv(18, $i)
+      &:last-child
+        text-align: right
+/* 底部确认 */
+.fixed-order-confirm
+  position: fixed
+  z-index: 1
+  bottom: 0
+  width: 100%
+  background-color: #f5f5f5
+  text-align: right
+  var
+    color: #db0000
+    font-style: normal
+.fixed-order-confirm-queren
+  position: absolute
+  right: 0
+  bottom: 0
+  display: block
+  text-align: center
+  height: 100%
+  color: #fff
+  background-color: #db0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .order-confirm-box, .fixed-order-confirm
+      height: dv(100, $i)
+    .fixed-order-confirm-queren
+      width: dv(224, $i)
+      line-height: dv(100, $i)
+      font-size: dv(32, $i)
+    .fixed-order-confirm-text
+      margin: 0 dv(232, $i) 0 0
+      font-size: dv(24, $i)
+      line-height: dv(100, $i)

@@ -1,0 +1,24 @@
+/* 顶部栏 */
+.top-header
+  position: relative
+  background-color: #f9f9f9
+  color: #222
+  text-align: center
+.top-header-back
+  position: absolute
+  display: inline-block
+  background-image: url("../img/jiantou-you.png")
+  background-repeat: no-repeat
+  background-position: center center
+
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .top-header
+      padding: dv(34, $i) 0
+      font-size: dv(32, $i)
+    .top-header-back
+      top: dv(10, $i)
+      left: dv(12, $i)
+      width: dv(90, $i)
+      height: dv(90, $i)
+      background-size: dv(20, $i) dv(32, $i)

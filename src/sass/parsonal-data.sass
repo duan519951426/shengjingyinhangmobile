@@ -1,0 +1,60 @@
+/**
+ * 个人资料
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+.personal-data
+  a, &:after
+    display: block
+  a
+    border-bottom-style: solid
+    border-bottom-color: #dadada
+    color: #222
+    background-image: url("../img/jiantou-you1.png")
+    background-repeat: no-repeat
+    background-position: px2rem(692) center
+  &:after
+    content: ""
+    background-color: #cac9c7
+  span
+    color: #838383
+.vb1, .vb2
+  font-weight: normal
+.f-r
+  float: right
+.touxiang
+  display: block
+  overflow: hidden
+  img
+    width: 100%
+    height: 100%
+.erweima
+  display: inline-block
+  background-image: url("../img/i2weima.jpg")
+  background-size: 100% 100%
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .personal-data
+      border-bottom: $i * 5px solid #f5f5f5
+      font-size: dv(24, $i)
+      a
+        padding: dv(34, $i) dv(105, $i) dv(34, $i) dv(38, $i)
+        border-bottom-width: $i * 1px
+        background-size: dv(20, $i) dv(32, $i)
+      &:after
+        height: dv(2, $i)
+    .vb1
+      vertical-align: dv(-40, $i)
+    .vb2
+      vertical-align: dv(-10, $i)
+    .touxiang
+      width: dv(102, $i)
+      height: dv(102, $i)
+      border-radius: dv(102, $i)
+      img
+        vertical-align: dv(-14, $i)
+    .erweima
+      width: dv(46, $i)
+      height: dv(46, $i)

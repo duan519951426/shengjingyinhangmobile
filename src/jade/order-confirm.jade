@@ -1,0 +1,74 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 确认订单
+        link(href='../css/order-detail.css' rel='stylesheet')
+        link(href='../css/u-infBox.css' rel='stylesheet')
+    body
+        header.top-header.clearfix 确认订单
+            a.top-header-back(href='my.html')
+        //收货地址
+        div.order-confirm
+            a.order-address(href='#')
+                div
+                    p.clearfix
+                        span.f-l 收件人：王小明
+                        span.f-r 18841889636
+                    address 收获地址：辽宁省沈阳市沈河区皇城街道沈阳市 沈河区西顺城街***号
+            div.seven-color
+        div.order-confirm-list
+            table.order-confirm-list-table
+                tr
+                    td.order-confirm-list-border.order-padding-1(rowspan='3')
+                        a.order-confirm-list-image(href='#')
+                            img(src='../img/_delete/g2.jpg')
+                    td.order-padding-1
+                        a.order-confirm-list-title(href='#') 现货选VR魔镜/蓝牙耳机/钢膜Lenovo/联想k32c36 乐檬3s 移动4G机3k
+                tr
+                    td.order-confirm-list-text.order-padding-1 机身颜色：柠檬金，套餐类型：官方标配 机身内存：16GB 版本类型：中国大陆
+                tr
+                    td.order-confirm-list-price.order-confirm-list-border.order-padding-1 ￥608.00
+                tr.order-confirm-list-etc
+                    td.order-confirm-list-border.order-padding-2 购买数量
+                    td.order-confirm-list-border.order-padding-2 1
+                tr.order-confirm-list-etc
+                    td.order-confirm-list-border.order-padding-2 配送方式
+                    td.order-confirm-list-border.order-padding-2 快递 免邮
+                tr.order-confirm-list-etc
+                    td.order-confirm-list-border.order-padding-2 免运费
+                    td.order-confirm-list-border.order-padding-2
+                        |卖家赠送运费险，可赔付确认收货前退货
+                        br
+                        |运费 0.00元
+            table.order-confirm-list-table
+                tr
+                    td.order-confirm-list-border.order-padding-1(rowspan='3')
+                        a.order-confirm-list-image(href='#')
+                            img(src='../img/_delete/g2.jpg')
+                    td.order-padding-1
+                        a.order-confirm-list-title(href='#') 现货选VR魔镜/蓝牙耳机/钢膜Lenovo/联想k32c36 乐檬3s 移动4G机3k
+                tr
+                    td.order-confirm-list-text.order-padding-1 机身颜色：柠檬金，套餐类型：官方标配 机身内存：16GB 版本类型：中国大陆
+                tr
+                    td.order-confirm-list-price.order-confirm-list-border.order-padding-1 ￥608.00
+                tr.order-confirm-list-etc
+                    td.order-confirm-list-border.order-padding-2 购买数量
+                    td.order-confirm-list-border.order-padding-2 1
+                tr.order-confirm-list-etc
+                    td.order-confirm-list-border.order-padding-2 配送方式
+                    td.order-confirm-list-border.order-padding-2 快递 免邮
+                tr.order-confirm-list-etc
+                    td.order-confirm-list-border.order-padding-2 免运费
+                    td.order-confirm-list-border.order-padding-2
+                        | 卖家赠送运费险，可赔付确认收货前退货
+                        br
+                        | 运费 0.00元
+        // 底部确认
+        div.order-confirm-box
+            section.fixed-order-confirm
+                div.fixed-order-confirm-text 合计：
+                    var ￥608.00
+                a.fixed-order-confirm-queren(href='#') 确认
+

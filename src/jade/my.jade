@@ -1,0 +1,105 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 我的
+        link(href='../css/my.css' rel='stylesheet')
+        link(href='../css/u-infBox.css' rel='stylesheet')
+    body
+        section.my-myInf.clearfix
+            a.my-myInf-pic(href='personal-data.html')
+                img(src='../img/_delete/touxiang1.jpg')
+            a.my-myInf-name(href='personal-data.html') 王小明
+            a.my-myInf-setUp(href='#') 设置
+            a.my-myInf-message(href='#')
+            i.pic-good
+        //订单
+        a.my-myOrder.clearfix(href='order-all.html')
+            b 我的订单
+            span 查看全部订单
+        //货物信息
+        ul.my-goodsInf.clearfix
+            li
+                a(href='order-confirm.html')
+                    i.icon-my.icon-my-a
+                    span 待付款
+            li
+                a(href='#')
+                    i.icon-my.icon-my-b
+                    span 待发货
+            li
+                a(href='#')
+                    i.icon-my.icon-my-c
+                        em.my-goodNum 4
+                    span 待收货
+            li
+                a(href='order-refunds.html')
+                    i.icon-my.icon-my-d
+                    span 退货
+        ul.u-infList
+            li.u-infBox
+                p.u-infBox-lg1.clearfix
+                    //
+                        span.u-infBox-lg1-l 退款时间：
+                            time 2016-07-22 09:28
+                    span.u-infBox-lg1-r 卖家已发货
+                table.u-infBox-table
+                    tr
+                        td.u-infBox-table-img(rowspan='2')
+                            a(href='#')
+                                img(src='../img/_delete/g0.jpg')
+                        td
+                            a.u-infBox-table-title(href='#') 现货选VR魔镜/蓝牙耳机/钢膜Lenovo/联想  k32c36乐檬3S移动4G手机k3
+                        td.u-infBox-table-price ￥608
+                            del ￥608
+                    tr
+                        td.u-infBox-table-text 机身颜色：柠檬金；套餐类型：官方标配；机身内存16GB;版本类型：中国大陆
+                        td.u-infBox-table-num ×1
+                p.u-infBox-lg2 共1件商品 合计：￥608（含运费 ￥0.00）
+                div.u-infBox-lg3
+                    a.u-infBox-btn.u-infBox-btn-b1(href='#') 查看物流
+                    a.u-infBox-btn.u-infBox-btn-b2(href='order-detail.html') 确认收货
+            li.u-infBox
+                p.u-infBox-lg1.clearfix
+                    //
+                        span.u-infBox-lg1-l 退款时间：
+                            time 2016-07-22 09:28
+                    span.u-infBox-lg1-r 卖家已发货
+                table.u-infBox-table
+                    tr
+                        td.u-infBox-table-img(rowspan='2')
+                            a(href='#')
+                                img(src='../img/_delete/g0.jpg')
+                        td
+                            a.u-infBox-table-title(href='#') 现货选VR魔镜/蓝牙耳机/钢膜Lenovo/联想  k32c36乐檬3S移动4G手机k3
+                        td.u-infBox-table-price ￥608
+                            del ￥608
+                    tr
+                        td.u-infBox-table-text 机身颜色：柠檬金；套餐类型：官方标配；机身内存16GB;版本类型：中国大陆
+                        td.u-infBox-table-num ×1
+                p.u-infBox-lg2 共1件商品 合计：￥608（含运费 ￥0.00）
+                div.u-infBox-lg3
+                    a.u-infBox-btn.u-infBox-btn-b1(href='#') 查看物流
+                    a.u-infBox-btn.u-infBox-btn-b2(href='order-detail.html') 确认收货
+        //fixed导航
+        section.fixed-nav-box
+            nav.fixed-nav.clearfix
+                li
+                    a(href='index.html')
+                        i.splite2.splite2-house
+                        span 首页
+                li
+                    a(href='goods-list.html')
+                        i.splite2.splite2-seach
+                        span 分类
+                li
+                    a(href='shopping-cart.html')
+                        i.splite2.splite2-shopping
+                        span 购物车
+                li
+                    a(href='my.html')
+                        i.splite2.splite2-human-fouce
+                        span.fixed-nav-fouce 我的
+
+

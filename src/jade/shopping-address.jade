@@ -1,0 +1,51 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 收货地址
+        link(href='../css/shopping-address.css' rel='stylesheet')
+    body
+        header.top-header.clearfix 收货地址
+            a.top-header-back(href='my.html')
+        // 地址
+        section.shipping-address
+            div.shipping-address-box
+                div.shipping-address-1
+                    h6.shipping-address-name.clearfix
+                        b 张xx
+                        span 18841844184
+                    address.shipping-address-as 辽宁省沈阳市沈河区皇城街道沈阳市 沈河区西顺城街***号
+                div.shipping-address-2.clearfix
+                    label.db0000
+                        input.c-checkbox(type='checkbox' checked)
+                        |默认地址
+                    span
+                        a(href='#')
+                            i.icon-editor-a
+                            |编辑
+                        a(href='#')
+                            i.icon-editor-b
+                            |删除
+            div.shipping-address-box
+                div.shipping-address-1
+                    h6.shipping-address-name.clearfix
+                        b 张xx
+                        span 18841844184
+                    address.shipping-address-as 吉林省长春市南关区曙光街道  平阳街与曙光路交汇287号 那里造型收
+                div.shipping-address-2.clearfix
+                    label
+                        input.c-checkbox(type='checkbox')
+                        |设为默认
+                    span
+                        a(href='#')
+                            i.icon-editor-a
+                            | 编辑
+                        a(href='#')
+                            i.icon-editor-b
+                            | 删除
+        //添加新地址
+        section.fixed-new-address
+            a.new-address(href='shopping-address-editor.html') 添加新地址
+
+

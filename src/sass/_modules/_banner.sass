@@ -1,0 +1,49 @@
+/* 轮播图 */
+.banner
+  position: relative
+  width: 100%
+  height: px2rem(365)
+  margin: 0 0 px2rem(39) 0
+.bannerbox, .bannerindex
+  position: absolute
+.bannerbox
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1
+  overflow: hidden
+.bannerlist
+  position: relative
+  width: px2rem(750 * 3)
+  height: 100%
+  overflow: hidden
+  a
+    float: left
+    display: block
+    width: 10rem
+    height: px2rem(365)
+  img
+    width: 100%
+    height: 100%
+    border: none
+.bannerindex
+  left: 0
+  bottom: px2rem(10)
+  width: 100%
+  z-index: 2
+  font-size: 0
+  text-align: center
+  li
+    display: inline-block
+    margin: 0 px2rem(8)
+    width: px2rem(30)
+    height: px2rem(30)
+    font-size: px2rem(22)
+    line-height: px2rem(30)
+    border-radius: px2rem(30)
+    background-color: #dbdbdb
+    color: #fff
+    text-align: center
+  li.thisindex
+    background-color: #ef0000

@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        script(src='../js/dpr.js')
+        title 注册
+        link(href='../css/login.css' rel='stylesheet')
+    body
+        header.top-header.clearfix 免费注册
+            a.top-header-back(href='login.html')
+            a.ln-help(href='help.html') 帮助
+        form.lnform
+            table.lnform-table
+                tr
+                    td 用户名
+                    td
+                        input.lnform-text(type='text' placeholder='手机号/用户名/邮箱')
+                tr
+                    td 请设置密码
+                    td
+                        input.lnform-text(type='text' placeholder='请输入密码')
+                tr
+                    td 请确认密码
+                    td
+                        input.lnform-text(type='text' placeholder='请输入密码')
+                tr
+                    td 验证码
+                    td.lnform-re
+                        input.lnform-text.lnform-text-lb(type='text' placeholder='请输入验证码')
+                        div.lnform-verificationCode
+                            img(src='../img/_delete/code.jpg')
+
+            div.ln-text.text-c
+                label
+                    input.lnform-cbox(type='checkbox')
+                    |我已阅读并同意
+                    a(href='#') 用户注册协议
+            input.lnform-button(type='submit' value='立即注册')

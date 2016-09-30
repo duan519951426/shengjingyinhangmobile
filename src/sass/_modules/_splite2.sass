@@ -1,0 +1,28 @@
+/* splite2 */
+.splite2
+  background-image: url("../img/splite2.png")
+
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .splite2
+      background-size: dv(350, $i) dv(90, $i)
+    .splite2-x1
+      background-position: dv(-200, $i) 0
+    .splite2-x2
+      background-position: dv(-280, $i) 0
+    .splite2-house
+      background-position: 0 0
+    .splite2-human
+      background-position: dv(-50, $i) 0
+    .splite2-seach
+      background-position: dv(-100, $i) 0
+    .splite2-shopping
+      background-position: dv(-150, $i) 0
+    .splite2-house-fouce
+      background-position: 0 dv(-50, $i)
+    .splite2-human-fouce
+      background-position: dv(-50, $i) dv(-50, $i)
+    .splite2-seach-fouce
+      background-position: dv(-100, $i) dv(-50, $i)
+    .splite2-shopping-fouce
+      background-position: dv(-150, $i) dv(-50, $i)

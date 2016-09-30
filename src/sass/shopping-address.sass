@@ -1,0 +1,173 @@
+/**
+ * 收货地址
+ */
+@import "_modules/_px2rem"
+@import "_modules/_cssreset"
+@import "_modules/_top-header"
+
+// 地址
+.shipping-address
+  background-color: #eee
+.shipping-address-box
+  background-color: #fff
+.shipping-address-name
+  b, span
+    font-weight: normal
+    color: #222
+  b
+    float: left
+  span
+    float: right
+.shipping-address-as
+  display: block
+  font-style: normal
+  color: #555
+.shipping-address-2
+  box-sizing: border-box
+  span
+    float: right
+.shipping-address-2, .shipping-address-2 a
+  color: #333
+.db0000
+  color: #db0000
+.icon-editor-a, .icon-editor-b
+  display: inline-block
+  background-image: url("../img/icon-editor.png")
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .shipping-address
+      padding: 0 0 dv(2, $i) 0
+    .shipping-address-box
+      padding: dv(32, $i) 0 0
+      margin: 0 0 dv(18, $i) 0
+    .shipping-address-1
+      padding: 0 dv(34, $i) dv(58, $i)
+    .shipping-address-name
+      margin: 0 0 dv(43, $i) 0
+      b
+        font-size: dv(28, $i)
+      span
+        font-size: dv(24, $i)
+    .shipping-address-as
+      font-size: dv(24, $i)
+    .shipping-address-2
+      padding: dv(20, $i) dv(34, $i)
+      border-top: $i * 1px solid #dadada
+      font-size: dv(24, $i)
+      label
+        vertical-align: dv(-10, $i)
+      input[type="checkbox"]
+        width: dv(32, $i)
+        height: dv(32, $i)
+        margin: 0 dv(30, $i) 0 0
+        vertical-align: dv(-4, $i)
+      a
+        margin: 0 dv(28, $i) 0 0
+    .icon-editor-a, .icon-editor-b
+      width: dv(44, $i)
+      height: dv(44, $i)
+      margin: 0 dv(12, $i) 0 0
+      vertical-align: dv(-12, $i)
+      background-size: dv(98, $i) dv(44, $i)
+    .icon-editor-b
+      background-position: dv(-54, $i) 0
+.c-checkbox
+  -webkit-appearance: none
+  background-color: #fff
+  border-style: solid
+  border-color: #676767
+  &:checked
+    background-image: url("../img/checked_03.png")
+    background-size: 100% 100%
+    background-color: #db0000
+    border-color: #db0000
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .c-checkbox
+      border-width: $i * 2px
+      border-radius: dv(6, $i)
+/* 添加新地址 */
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .fixed-new-address
+      height: dv(120, $i)
+    .new-address
+      height: dv(120, $i)
+      font-size: dv(30, $i)
+      line-height: dv(120, $i)
+.new-address
+  position: fixed
+  z-index: 1
+  bottom: 0
+  left: 0
+  width: 100%
+  text-align: center
+  color: #fff
+  background-color: #db0000
+/* 地址编辑 */
+.edr-save
+  position: absolute
+  color: #db0000
+  border: none
+  background-color: transparent
+.edr-table
+  border-collapse: collapse
+  width: 100%
+  th
+    font-weight: normal
+    text-align: left
+.edr-text, .edr-textarea
+  box-sizing: border-box
+  width: 100%
+  border: none
+.edr-text
+  height: 100%
+.edr-textarea
+  overflow: auto
+  resize: none
+.edr-x:after
+  content: ""
+  display: block
+  background-color: #eee
+.text-r
+  text-align: right
+.edr-select
+  box-sizing: content-box
+  border: none
+  -webkit-appearance: none
+  background-color: #fff
+
+@for $i from 1 through 3
+  [data-dpr="#{$i}"]
+    .edr-save
+      top: dv(38, $i)
+      right: dv(50, $i)
+      font-size: dv(24, $i)
+    .edr-table
+      th, td
+        height: dv(100, $i)
+        border-bottom: $i * 1px solid #dadada
+        font-size: dv(24, $i)
+      th
+        width: dv(162, $i)
+        padding: 0 0 0 dv(34, $i)
+        color: #222
+    .edr-text, .edr-textarea
+      font-size: dv(28, $i)
+    .edr-text
+      padding: 0 dv(8, $i)
+    .edr-textarea
+      height: dv(182, $i)
+      padding: dv(34, $i)
+    .edr-select
+      padding: 0 dv(10, $i)
+      border-right: $i * 1px solid #dadada
+      font-size: dv(24, $i)
+    .edr-x:after
+      height: dv(20, $i)
+      border-top: $i * 1px solid #dadada
+    .edr-ckx
+      width: dv(30, $i)
+      height: dv(30, $i)
+      margin: 0 dv(38, $i) 0 0
+
